@@ -59,6 +59,10 @@ namespace hospital_project
                 f2.Show();
                 this.Hide();
             }
+            else if (txtUsername.Text == "" && txtPassword.Text == "") 
+            {
+                MessageBox.Show("Please fill all the boxes!!");
+            }
             else
             {
                 MessageBox.Show("Invalid username or password. Please try again.");
