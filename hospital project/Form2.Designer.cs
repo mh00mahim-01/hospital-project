@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonDoctor = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonDoctor
-            // 
-            this.buttonDoctor.Image = global::hospital_project.Properties.Resources.Copilot_20260122_004546;
-            this.buttonDoctor.Location = new System.Drawing.Point(268, 320);
-            this.buttonDoctor.Name = "buttonDoctor";
-            this.buttonDoctor.Size = new System.Drawing.Size(127, 114);
-            this.buttonDoctor.TabIndex = 1;
-            this.buttonDoctor.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -71,7 +61,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 553);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonDoctor);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form2";
             this.Text = "LoginOptions ";
@@ -83,7 +72,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonDoctor;
         private System.Windows.Forms.Button button1;
     }
 }
