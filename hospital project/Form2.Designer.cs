@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonPatient = new System.Windows.Forms.Button();
             this.buttonDoctor = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonPatient
-            // 
-            this.buttonPatient.Image = global::hospital_project.Properties.Resources.Copilot_20260122_003925;
-            this.buttonPatient.Location = new System.Drawing.Point(536, 320);
-            this.buttonPatient.Name = "buttonPatient";
-            this.buttonPatient.Size = new System.Drawing.Size(127, 114);
-            this.buttonPatient.TabIndex = 3;
-            this.buttonPatient.UseVisualStyleBackColor = true;
             // 
             // buttonDoctor
             // 
@@ -81,7 +71,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 553);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonPatient);
             this.Controls.Add(this.buttonDoctor);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form2";
@@ -95,7 +84,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonDoctor;
-        private System.Windows.Forms.Button buttonPatient;
         private System.Windows.Forms.Button button1;
     }
 }
