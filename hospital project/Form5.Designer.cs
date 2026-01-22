@@ -62,6 +62,7 @@
             this.buttonBack.TabIndex = 22;
             this.buttonBack.Text = "<<";
             this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // buttonLogin
             // 
@@ -73,6 +74,7 @@
             this.buttonLogin.TabIndex = 21;
             this.buttonLogin.Text = "Login ";
             this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // txtPassword
             // 
@@ -132,19 +134,20 @@
             this.buttonSignup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.buttonSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSignup.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonSignup.Location = new System.Drawing.Point(717, 390);
+            this.buttonSignup.Location = new System.Drawing.Point(730, 388);
             this.buttonSignup.Name = "buttonSignup";
-            this.buttonSignup.Size = new System.Drawing.Size(97, 29);
+            this.buttonSignup.Size = new System.Drawing.Size(111, 33);
             this.buttonSignup.TabIndex = 23;
             this.buttonSignup.Text = "Register";
             this.buttonSignup.UseVisualStyleBackColor = false;
+            this.buttonSignup.Click += new System.EventHandler(this.buttonSignup_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(498, 394);
+            this.label4.Location = new System.Drawing.Point(475, 394);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(213, 20);
             this.label4.TabIndex = 24;
@@ -168,7 +171,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form5";
-            this.Text = "Patient login";
+            this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -46,5 +46,12 @@ namespace hospital_project
         {
 
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Form5 f5 = new Form5();
+            f5.Show();
+            this.Hide();
+        }
     }
 }

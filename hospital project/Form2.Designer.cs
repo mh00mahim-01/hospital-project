@@ -50,21 +50,22 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button1.Location = new System.Drawing.Point(761, 461);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 64);
             this.button1.TabIndex = 4;
-            this.button1.Text = "<<";
+            this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.BackgroundImage = global::hospital_project.Properties.Resources.Copilot_20260122_004546;
             this.button2.Location = new System.Drawing.Point(318, 223);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 106);
+            this.button2.Size = new System.Drawing.Size(152, 146);
             this.button2.TabIndex = 5;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -72,9 +73,9 @@
             // button4
             // 
             this.button4.BackgroundImage = global::hospital_project.Properties.Resources.Copilot_20260122_003925;
-            this.button4.Location = new System.Drawing.Point(549, 223);
+            this.button4.Location = new System.Drawing.Point(550, 223);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 106);
+            this.button4.Size = new System.Drawing.Size(149, 146);
             this.button4.TabIndex = 7;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);

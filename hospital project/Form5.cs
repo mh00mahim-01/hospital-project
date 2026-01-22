@@ -36,5 +36,33 @@ namespace hospital_project
         {
 
         }
+
+        private void buttonSignup_Click(object sender, EventArgs e)
+        {
+            Form6 f6 = new Form6();
+            f6.Show();
+            this.Hide();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "admin" && txtPassword.Text == "12345" )
+            {
+                Form2 f2 = new Form2();
+                f2.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password. Please try again.");
+            }
+        }
     }
 }
