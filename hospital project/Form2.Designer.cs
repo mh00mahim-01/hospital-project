@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.buttonPatient = new System.Windows.Forms.Button();
-            this.buttonAdmin = new System.Windows.Forms.Button();
             this.buttonDoctor = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,16 +43,6 @@
             this.buttonPatient.Size = new System.Drawing.Size(127, 114);
             this.buttonPatient.TabIndex = 3;
             this.buttonPatient.UseVisualStyleBackColor = true;
-            // 
-            // buttonAdmin
-            // 
-            this.buttonAdmin.AutoSize = true;
-            this.buttonAdmin.BackgroundImage = global::hospital_project.Properties.Resources._101;
-            this.buttonAdmin.Location = new System.Drawing.Point(407, 174);
-            this.buttonAdmin.Name = "buttonAdmin";
-            this.buttonAdmin.Size = new System.Drawing.Size(127, 114);
-            this.buttonAdmin.TabIndex = 2;
-            this.buttonAdmin.UseVisualStyleBackColor = true;
             // 
             // buttonDoctor
             // 
@@ -93,14 +82,12 @@
             this.ClientSize = new System.Drawing.Size(932, 553);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonPatient);
-            this.Controls.Add(this.buttonAdmin);
             this.Controls.Add(this.buttonDoctor);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form2";
-            this.Text = "loginOptions ";
+            this.Text = "LoginOptions ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -108,7 +95,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonDoctor;
-        private System.Windows.Forms.Button buttonAdmin;
         private System.Windows.Forms.Button buttonPatient;
         private System.Windows.Forms.Button button1;
     }
