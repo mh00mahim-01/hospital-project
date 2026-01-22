@@ -66,17 +66,17 @@
             // 
             this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(676, 300);
+            this.buttonLogin.Location = new System.Drawing.Point(679, 273);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(97, 40);
             this.buttonLogin.TabIndex = 21;
-            this.buttonLogin.Text = "login ";
+            this.buttonLogin.Text = "Login ";
             this.buttonLogin.UseVisualStyleBackColor = false;
             // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtPassword.Location = new System.Drawing.Point(617, 247);
+            this.txtPassword.Location = new System.Drawing.Point(617, 224);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(224, 22);
             this.txtPassword.TabIndex = 20;
@@ -96,7 +96,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(498, 247);
+            this.label3.Location = new System.Drawing.Point(498, 224);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 20);
             this.label3.TabIndex = 18;
@@ -122,20 +122,20 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
             this.label1.Location = new System.Drawing.Point(635, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 39);
+            this.label1.Size = new System.Drawing.Size(123, 38);
             this.label1.TabIndex = 16;
-            this.label1.Text = "login ";
+            this.label1.Text = "Log-in ";
             // 
             // buttonSignup
             // 
             this.buttonSignup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.buttonSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSignup.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonSignup.Location = new System.Drawing.Point(744, 385);
+            this.buttonSignup.Location = new System.Drawing.Point(717, 390);
             this.buttonSignup.Name = "buttonSignup";
             this.buttonSignup.Size = new System.Drawing.Size(97, 29);
             this.buttonSignup.TabIndex = 23;
-            this.buttonSignup.Text = "Sign-up";
+            this.buttonSignup.Text = "Register";
             this.buttonSignup.UseVisualStyleBackColor = false;
             // 
             // label4
@@ -143,11 +143,12 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(535, 389);
+            this.label4.Location = new System.Drawing.Point(498, 394);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(203, 20);
+            this.label4.Size = new System.Drawing.Size(213, 20);
             this.label4.TabIndex = 24;
-            this.label4.Text = "Don\'t have an acount ?";
+            this.label4.Text = "Don\'t have an account ?";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Form5
             // 
