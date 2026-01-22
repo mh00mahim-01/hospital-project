@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonlogin = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.ButtonSign = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -55,19 +54,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // buttonlogin
-            // 
-            this.buttonlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.buttonlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonlogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonlogin.Location = new System.Drawing.Point(653, 385);
-            this.buttonlogin.Name = "buttonlogin";
-            this.buttonlogin.Size = new System.Drawing.Size(97, 29);
-            this.buttonlogin.TabIndex = 32;
-            this.buttonlogin.Text = "Login >>";
-            this.buttonlogin.UseVisualStyleBackColor = false;
-            this.buttonlogin.Click += new System.EventHandler(this.buttonSignup_Click);
             // 
             // buttonBack
             // 
@@ -218,7 +204,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.buttonlogin);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.ButtonSign);
             this.Controls.Add(this.txtPassword);
@@ -238,7 +223,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonlogin;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button ButtonSign;
         private System.Windows.Forms.TextBox txtPassword;
