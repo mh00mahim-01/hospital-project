@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,13 +52,15 @@
             this.panel1.Size = new System.Drawing.Size(933, 33);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // pictureBox1
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel2.Location = new System.Drawing.Point(-1, 33);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(183, 521);
-            this.panel2.TabIndex = 1;
+            this.pictureBox1.Image = global::hospital_project.Properties.Resources.download;
+            this.pictureBox1.Location = new System.Drawing.Point(50, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -71,15 +73,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = " doctor dashboard\r\n";
             // 
-            // pictureBox1
+            // panel2
             // 
-            this.pictureBox1.Image = global::hospital_project.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel2.Location = new System.Drawing.Point(-1, 33);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(183, 521);
+            this.panel2.TabIndex = 1;
             // 
             // button3
             // 
@@ -99,9 +99,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(189, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 25);
+            this.label2.Size = new System.Drawing.Size(177, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Welcome Dr,";
+            this.label2.Text = "Welcome Doctor,";
             // 
             // dataGridView1
             // 
