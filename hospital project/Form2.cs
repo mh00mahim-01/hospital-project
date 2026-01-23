@@ -42,5 +42,12 @@ namespace hospital_project
             f5.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form7 f7 = new Form7();
+            f7.Show();
+            this.Hide();
+        }
     }
 }
