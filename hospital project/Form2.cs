@@ -31,7 +31,9 @@ namespace hospital_project
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form4 f4 = new Form4();
+            f4.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
