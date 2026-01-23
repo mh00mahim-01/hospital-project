@@ -228,7 +228,7 @@
             this.Controls.Add(this.buttonBack);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Form3";
-            this.Text = "DoctorP";
+            this.Text = "Doctor Panel";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
