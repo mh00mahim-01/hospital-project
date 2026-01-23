@@ -13,13 +13,13 @@ namespace hospital_project
             DisplayUser();
         }
 
-        readonly SqlConnection Con = new SqlConnection(
-    @"Data Source=(LocalDB)\MSSQLLocalDB;
-      AttachDbFilename=C:\Users\ASUS\OneDrive - American International University-Bangladesh\Documents\HMS.mdf;
-      Integrated Security=True;
-      Connect Timeout=30;
-      Encrypt=False;
-      TrustServerCertificate=True");
+        SqlConnection Con = new SqlConnection(
+            @"Data Source=(LocalDB)\MSSQLLocalDB;
+              AttachDbFilename=C:\Users\ASUS\OneDrive - American International University-Bangladesh\Documents\HMS.mdf;
+              Integrated Security=True;
+              Connect Timeout=30;
+              Encrypt=False;
+              TrustServerCertificate=True");
 
         private void DisplayUser()
         {
@@ -27,18 +27,17 @@ namespace hospital_project
             {
                 if (Con.State == ConnectionState.Closed)
                     Con.Open();
+
                 string Query = "SELECT * FROM [User]";
                 SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
-                DataSet ds = new DataSet();
-                sda.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
             finally
             {
                 Con.Close();
@@ -58,14 +57,20 @@ namespace hospital_project
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Enter UserId");
+                return;
+            }
+
             try
             {
                 if (Con.State == ConnectionState.Closed)
                     Con.Open();
 
-                string query = "DELETE FROM [User] WHERE UserID = @id";
+                string query = "DELETE FROM [User] WHERE UserId=@UserId";
                 SqlCommand cmd = new SqlCommand(query, Con);
-                cmd.Parameters.AddWithValue("@id", textBox1.Text);
+                cmd.Parameters.AddWithValue("@UserId", textBox1.Text);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Record Deleted Successfully");
@@ -83,28 +88,29 @@ namespace hospital_project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "" || textBox2.Text == "" ||
+                 textBox3.Text == "" || comboBox1.Text == "")
+            {
+                MessageBox.Show("Info Missing");
+                return;
+            }
+
             try
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || comboBox1.Text == "")
-                {
-                    MessageBox.Show("Info Missing");
-                    return;
-                }
-
                 if (Con.State == ConnectionState.Closed)
                     Con.Open();
 
                 string query = @"UPDATE [User]
-                         SET Username = @Username,
-                             Password = @Password,
-                             Role = @Role
-                         WHERE UserId = @UserId";
+                                 SET Username=@Username,
+                                     Password=@Password,
+                                     Role=@Role
+                                 WHERE UserId=@UserId";
 
                 SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.Parameters.AddWithValue("@UserId", textBox1.Text);
                 cmd.Parameters.AddWithValue("@Username", textBox2.Text);
                 cmd.Parameters.AddWithValue("@Password", textBox3.Text);
                 cmd.Parameters.AddWithValue("@Role", comboBox1.Text);
-                cmd.Parameters.AddWithValue("@UserId", textBox1.Text);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Record Updated Successfully");
@@ -122,29 +128,35 @@ namespace hospital_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (textBox1.Text == "" || textBox2.Text == "" ||
+                textBox3.Text == "" || comboBox1.Text == "")
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || comboBox1.Text == "")
-                {
-                    MessageBox.Show("Info Missing");
-                }
-                else
-                {
-                    Con.Open();
-                    string query = "insert into [User] values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + comboBox1.Text + "')";
-                    SqlCommand cmd = new SqlCommand(query, Con);
-                    cmd.ExecuteNonQuery();
-                    Con.Close();
-                    MessageBox.Show("Record Added Successfully");
-                    DisplayUser();
-                }
+                MessageBox.Show("Info Missing");
+                return;
             }
 
+            try
+            {
+                if (Con.State == ConnectionState.Closed)
+                    Con.Open();
+
+                string query = @"INSERT INTO [User] (UserId, Username, Password, Role)
+                                 VALUES (@UserId, @Username, @Password, @Role)";
+
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.Parameters.AddWithValue("@UserId", textBox1.Text);
+                cmd.Parameters.AddWithValue("@Username", textBox2.Text);
+                cmd.Parameters.AddWithValue("@Password", textBox3.Text);
+                cmd.Parameters.AddWithValue("@Role", comboBox1.Text);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Record Added Successfully");
+                DisplayUser();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
             finally
             {
                 Con.Close();
@@ -153,10 +165,10 @@ namespace hospital_project
 
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            comboBox1.Text = "";
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            comboBox1.SelectedIndex = -1;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -173,23 +185,10 @@ namespace hospital_project
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            try
-            {
-                textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-                textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-                textBox3.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-                comboBox1.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                Con.Close();
-            }
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            textBox3.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
         }
     }
 }
