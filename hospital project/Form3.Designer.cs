@@ -33,11 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -67,9 +65,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 22);
+            this.label1.Size = new System.Drawing.Size(77, 22);
             this.label1.TabIndex = 34;
-            this.label1.Text = "Doctor ID";
+            this.label1.Text = "User ID";
             // 
             // label2
             // 
@@ -86,11 +84,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(328, 133);
+            this.label3.Location = new System.Drawing.Point(350, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 22);
+            this.label3.Size = new System.Drawing.Size(108, 22);
             this.label3.TabIndex = 36;
-            this.label3.Text = "Doctor Gender";
+            this.label3.Text = "Speaciality";
             // 
             // label4
             // 
@@ -101,16 +99,6 @@
             this.label4.Size = new System.Drawing.Size(132, 22);
             this.label4.TabIndex = 37;
             this.label4.Text = "Qualifications";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(694, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(191, 22);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Years of Experience";
             // 
             // textBox1
             // 
@@ -133,19 +121,15 @@
             this.textBox3.Size = new System.Drawing.Size(189, 22);
             this.textBox3.TabIndex = 41;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(698, 158);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 22);
-            this.textBox4.TabIndex = 42;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "Medicine",
+            "Neurology",
+            "Cardiology",
+            "Nephrology",
+            "Oncology "});
             this.comboBox1.Location = new System.Drawing.Point(332, 158);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(137, 24);
@@ -233,11 +217,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -263,11 +245,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
