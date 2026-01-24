@@ -41,7 +41,8 @@ namespace hospital_project
 
         private void Form9_Load(object sender, EventArgs e)
         {
-
+             dateTimePicker1.MinDate = DateTime.Today;
+            dateTimePicker1.MaxDate = DateTime.Today.AddDays(10);
         }
 
 
@@ -119,6 +120,63 @@ namespace hospital_project
             f4.Show();
             this.Hide();
         }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+         
+            // Define allowed range
+            TimeSpan minTime = new TimeSpan(10, 0, 0);  
+            TimeSpan maxTime = new TimeSpan(16, 0, 0); 
+
+            // Get selected time
+            TimeSpan selectedTime = dateTimePicker2.Value.TimeOfDay;
+
+            // Check if outside range
+            if (selectedTime < minTime || selectedTime > maxTime)
+            {
+                MessageBox.Show("Please select a time between 10:00 AM and 4:00 PM.",
+                                "Invalid Time",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+
+                // Reset to default (e.g., 10:00 AM)
+                dateTimePicker2.Value = DateTime.Today.Add(minTime);
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+       
+            if (dateTimePicker1.Value.DayOfWeek == DayOfWeek.Friday ||
+                dateTimePicker1.Value.DayOfWeek == DayOfWeek.Saturday)
+            {
+                MessageBox.Show("Appointments cannot be booked on Fridays or Saturdays.",
+                                "Invalid Day",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+
+                // Reset to next valid day (skip Fri/Sat)
+                DateTime nextDay = dateTimePicker1.Value.AddDays(1);
+                while (nextDay.DayOfWeek == DayOfWeek.Friday || nextDay.DayOfWeek == DayOfWeek.Saturday)
+                {
+                    nextDay = nextDay.AddDays(1);
+                }
+
+                // Ensure still within allowed range
+                if (nextDay <= dateTimePicker1.MaxDate)
+                {
+                    dateTimePicker1.Value = nextDay;
+                }
+                else
+                {
+                    // If no valid day left in range, reset to MinDate
+                    dateTimePicker1.Value = dateTimePicker1.MinDate;
+                }
+            }
+        }
+
     }
 }
+
+
 
