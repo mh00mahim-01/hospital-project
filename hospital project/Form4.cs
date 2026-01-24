@@ -51,8 +51,8 @@ namespace hospital_project
                 da.Fill(dt);
 
                 listBox1.DataSource = dt;
-                listBox1.DisplayMember = "DocName";   // what patient sees
-                listBox1.ValueMember = "UserId";     // hidden ID
+                listBox1.DisplayMember = "DocName";   
+                listBox1.ValueMember = "UserId";     
             }
             catch (Exception ex)
             {
@@ -141,7 +141,7 @@ namespace hospital_project
 
             int doctorUserId = Convert.ToInt32(drv["UserId"]);
 
-            // ✅ ADD THIS LINE
+            
             SelectedDoctorId = doctorUserId;
 
             LoadDoctorInfo(doctorUserId);

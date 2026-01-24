@@ -13,7 +13,7 @@ namespace hospital_project
 {
     public partial class Form5 : Form
     {
-        // 🔹 NEW: Database connection added
+        
         SqlConnection Con = new SqlConnection(
             @"Data Source=(LocalDB)\MSSQLLocalDB;
               AttachDbFilename=C:\Users\ASUS\OneDrive - American International University-Bangladesh\Documents\HMS.mdf;
@@ -63,7 +63,7 @@ namespace hospital_project
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            // 🔒 Fixed Admin Login (UNCHANGED as requested)
+            
             if (txtUsername.Text == "admin" && txtPassword.Text == "12345")
             {
                 Form2 f2 = new Form2();
@@ -72,7 +72,7 @@ namespace hospital_project
                 return;
             }
 
-            // ❌ Empty Check (FIXED condition)
+            
             if (txtUsername.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show("Please fill all the boxes!!");
@@ -97,18 +97,18 @@ namespace hospital_project
 
                 if (dr.Read())
                 {
-                    int userId = Convert.ToInt32(dr["UserId"]);   // ✅ HERE
-                    string role = dr["Role"].ToString().ToLower(); // ✅ HERE
+                    int userId = Convert.ToInt32(dr["UserId"]);   
+                    string role = dr["Role"].ToString().ToLower(); 
 
                     if (role == "doctor")
                     {
-                        Form8 doctorForm = new Form8(userId); // pass doctor id
+                        Form8 doctorForm = new Form8(userId); 
                         doctorForm.Show();
                         this.Hide();
                     }
                     else if (role == "patient")
                     {
-                        Form4 patientForm = new Form4(userId); // optional
+                        Form4 patientForm = new Form4(userId); 
                         patientForm.Show();
                         this.Hide();
                     }

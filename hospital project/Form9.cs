@@ -44,13 +44,13 @@ namespace hospital_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Validation
-            if (string.IsNullOrWhiteSpace(textBox1.Text) ||   // Patient Name
-                string.IsNullOrWhiteSpace(textBox2.Text) ||   // Age
-                string.IsNullOrWhiteSpace(textBox3.Text) ||   // Phone
-                string.IsNullOrWhiteSpace(comboBox1.Text) ||  // Gender
-                string.IsNullOrWhiteSpace(comboBox2.Text) ||  // Blood Group
-                string.IsNullOrWhiteSpace(textBox4.Text))     // Major Disease
+            
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||   
+                string.IsNullOrWhiteSpace(textBox2.Text) ||   
+                string.IsNullOrWhiteSpace(textBox3.Text) ||   
+                string.IsNullOrWhiteSpace(comboBox1.Text) ||  
+                string.IsNullOrWhiteSpace(comboBox2.Text) ||  
+                string.IsNullOrWhiteSpace(textBox4.Text))     
             {
                 MessageBox.Show("Please fill up all the information first!",
                                 "Validation Error",
@@ -80,7 +80,7 @@ namespace hospital_project
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
 
-                // Optional: Clear fields
+                
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();
@@ -125,21 +125,21 @@ namespace hospital_project
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
 
-                // Reset to next valid day (skip Fri/Sat)
+                
                 DateTime nextDay = dateTimePicker1.Value.AddDays(1);
                 while (nextDay.DayOfWeek == DayOfWeek.Friday || nextDay.DayOfWeek == DayOfWeek.Saturday)
                 {
                     nextDay = nextDay.AddDays(1);
                 }
 
-                // Ensure still within allowed range
+                
                 if (nextDay <= dateTimePicker1.MaxDate)
                 {
                     dateTimePicker1.Value = nextDay;
                 }
                 else
                 {
-                    // If no valid day left in range, reset to MinDate
+                    
                     dateTimePicker1.Value = dateTimePicker1.MinDate;
                 }
             }
@@ -147,14 +147,14 @@ namespace hospital_project
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-            // Define allowed range
+            
             TimeSpan minTime = new TimeSpan(10, 0, 0);
             TimeSpan maxTime = new TimeSpan(16, 0, 0);
 
-            // Get selected time
+            
             TimeSpan selectedTime = dateTimePicker2.Value.TimeOfDay;
 
-            // Check if outside range
+            
             if (selectedTime < minTime || selectedTime > maxTime)
             {
                 MessageBox.Show("Please select a time between 10:00 AM and 4:00 PM.",
@@ -162,7 +162,7 @@ namespace hospital_project
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
 
-                // Reset to default (e.g., 10:00 AM)
+                
                 dateTimePicker2.Value = DateTime.Today.Add(minTime);
             }
         }

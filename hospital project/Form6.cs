@@ -92,7 +92,7 @@ namespace hospital_project
 
         private void ButtonSign_Click(object sender, EventArgs e)
         {
-            string email = textBox2.Text.Trim();     // Username
+            string email = textBox2.Text.Trim();     
             string password = textBox4.Text.Trim();
             string confirmPassword = textBox5.Text.Trim();
             string role = comboBox1.Text.Trim();
@@ -109,7 +109,7 @@ namespace hospital_project
                 return;
             }
 
-            int userId = GenerateUserId(); // 🔥 AUTO USER ID
+            int userId = GenerateUserId();
 
             try
             {
@@ -128,19 +128,19 @@ namespace hospital_project
 
                 MessageBox.Show("User is added successfully.\nUser ID: " + userId);
 
-                // ✅ CLEAR ALL INPUTS AFTER SUCCESS
                 
-                textBox1.Clear();   // name
+                
+                textBox1.Clear();   
 
-                textBox2.Clear();   // email
+                textBox2.Clear();   
 
-                textBox3.Clear();   // phone
+                textBox3.Clear();   
 
-                textBox4.Clear();   // password
+                textBox4.Clear();   
 
-                textBox5.Clear();   // confirm password
+                textBox5.Clear();   
 
-                comboBox1.SelectedIndex = -1; // clear combo box
+                comboBox1.SelectedIndex = -1; 
 
 
 
