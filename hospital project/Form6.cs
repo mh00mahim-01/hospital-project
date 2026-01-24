@@ -129,8 +129,12 @@ namespace hospital_project
                 MessageBox.Show("User is added successfully.\nUser ID: " + userId);
 
                 // ✅ CLEAR ALL INPUTS AFTER SUCCESS
+                
+                textBox1.Clear();   // name
 
                 textBox2.Clear();   // email
+
+                textBox3.Clear();   // phone
 
                 textBox4.Clear();   // password
 
