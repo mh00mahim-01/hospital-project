@@ -92,5 +92,11 @@ namespace hospital_project
                 Con.Close();
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+
+        }
     }
 }
