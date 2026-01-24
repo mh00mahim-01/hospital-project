@@ -148,6 +148,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form8";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doctor Dashboard";
             this.Load += new System.EventHandler(this.Form8_Load);
             this.panel1.ResumeLayout(false);
