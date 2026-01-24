@@ -21,7 +21,7 @@ namespace hospital_project
 
         readonly SqlConnection Con = new SqlConnection(
         @"Data Source=(LocalDB)\MSSQLLocalDB;
-        AttachDbFilename=""C:\Users\ASUS\OneDrive - American International University-Bangladesh\Documents\HMS.mdf"";
+        AttachDbFilename=""D:\Documents\Hospital p.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=True;
         Integrated Security=True;
         Connect Timeout=30;
         Encrypt=False");
