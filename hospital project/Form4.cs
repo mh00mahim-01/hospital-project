@@ -14,11 +14,22 @@ namespace hospital_project
 {
     public partial class Form4 : Form
     {
+        public static int SelectedDoctorId;
+
+        int loggedPatientId;
+
+
         public Form4()
         {
             InitializeComponent();
-            
         }
+
+        public Form4(int patientId)
+        {
+            InitializeComponent();
+            loggedPatientId = patientId;
+        }
+
 
 
         SqlConnection Con = new SqlConnection(
@@ -123,11 +134,15 @@ namespace hospital_project
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem == null) return;
+            if (listBox1.SelectedItem == null)
+                return;
 
             DataRowView drv = listBox1.SelectedItem as DataRowView;
 
             int doctorUserId = Convert.ToInt32(drv["UserId"]);
+
+            // ✅ ADD THIS LINE
+            SelectedDoctorId = doctorUserId;
 
             LoadDoctorInfo(doctorUserId);
         }

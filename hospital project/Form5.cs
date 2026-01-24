@@ -84,10 +84,10 @@ namespace hospital_project
                 if (Con.State == ConnectionState.Closed)
                     Con.Open();
 
-                // 🔹 NEW: Fetch role from User table
-                string query = @"SELECT Role 
-                                 FROM [User]
-                                 WHERE Username=@Username AND Password=@Password";
+                string query = @"SELECT UserId, Role 
+                 FROM [User]
+                 WHERE Username=@Username AND Password=@Password";
+
 
                 SqlCommand cmd = new SqlCommand(query, Con);
                 cmd.Parameters.AddWithValue("@Username", txtUsername.Text);
@@ -97,19 +97,18 @@ namespace hospital_project
 
                 if (dr.Read())
                 {
-                    string role = dr["Role"].ToString().ToLower();
+                    int userId = Convert.ToInt32(dr["UserId"]);   // ✅ HERE
+                    string role = dr["Role"].ToString().ToLower(); // ✅ HERE
 
-                    // 🩺 Doctor Login
                     if (role == "doctor")
                     {
-                        Form8 doctorForm = new Form8();
+                        Form8 doctorForm = new Form8(userId); // pass doctor id
                         doctorForm.Show();
                         this.Hide();
                     }
-                    // 👤 Patient Login
                     else if (role == "patient")
                     {
-                        Form4 patientForm = new Form4();
+                        Form4 patientForm = new Form4(userId); // optional
                         patientForm.Show();
                         this.Hide();
                     }
@@ -120,8 +119,9 @@ namespace hospital_project
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password. Please try again.");
+                    MessageBox.Show("Invalid username or password.");
                 }
+
             }
             catch (Exception ex)
             {

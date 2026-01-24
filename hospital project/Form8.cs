@@ -14,11 +14,15 @@ namespace hospital_project
 {
     public partial class Form8 : Form
     {
-        public Form8()
+        int loggedDoctorId;
+
+        public Form8(int doctorId)
         {
             InitializeComponent();
+            loggedDoctorId = doctorId;
             DisplayAppointments();
         }
+
 
         SqlConnection Con = new SqlConnection(
     @"Data Source=(LocalDB)\MSSQLLocalDB;
@@ -35,21 +39,25 @@ namespace hospital_project
                 Con.Open();
 
                 SqlDataAdapter sda = new SqlDataAdapter(
-                    "SELECT PName, Date, Time FROM PTable", Con);
+                    "SELECT PName, Date, Time FROM PTable WHERE DoctorId=@DoctorId", Con);
+
+                sda.SelectCommand.Parameters.AddWithValue("@DoctorId", loggedDoctorId);
 
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
                 dataGridView1.DataSource = dt;
-
-                Con.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
                 Con.Close();
             }
         }
+
 
 
 
@@ -96,6 +104,11 @@ namespace hospital_project
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+
+        }
+
+        private void Form8_Load(object sender, EventArgs e)
+        {
 
         }
     }
