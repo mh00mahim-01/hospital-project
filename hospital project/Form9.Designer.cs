@@ -215,7 +215,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 40);
             this.button1.TabIndex = 16;
-            this.button1.Text = "Confirm";
+            this.button1.Text = "book & confirm ";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
