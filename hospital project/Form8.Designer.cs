@@ -122,6 +122,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Delete Appointmet";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label3
             // 
@@ -147,6 +148,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form8";
             this.Text = "Doctor Dashboard";
+            this.Load += new System.EventHandler(this.Form8_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

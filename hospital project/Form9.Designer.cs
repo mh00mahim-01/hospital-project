@@ -47,6 +47,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -215,8 +216,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 40);
             this.button1.TabIndex = 16;
-            this.button1.Text = "book & confirm ";
+            this.button1.Text = "Confirm ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // dateTimePicker1
             // 
@@ -239,12 +241,24 @@
             this.dateTimePicker2.TabIndex = 18;
             this.dateTimePicker2.Value = new System.DateTime(2026, 1, 24, 0, 0, 0, 0);
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBack.Location = new System.Drawing.Point(776, 491);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(120, 40);
+            this.buttonBack.TabIndex = 19;
+            this.buttonBack.Text = "<<";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click_1);
+            // 
             // Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(932, 553);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
@@ -266,6 +280,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form9";
             this.Text = "Appointment ";
+            this.Load += new System.EventHandler(this.Form9_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,5 +307,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button buttonBack;
     }
 }
