@@ -127,6 +127,21 @@ namespace hospital_project
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("User is added successfully.\nUser ID: " + userId);
+
+                // ✅ CLEAR ALL INPUTS AFTER SUCCESS
+
+                textBox2.Clear();   // email
+
+                textBox4.Clear();   // password
+
+                textBox5.Clear();   // confirm password
+
+                comboBox1.SelectedIndex = -1; // clear combo box
+
+
+
+
+
             }
             catch (Exception ex)
             {
