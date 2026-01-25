@@ -19,6 +19,7 @@ namespace hospital_project
         public Form8(int doctorId)
         {
             InitializeComponent();
+            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
             loggedDoctorId = doctorId;
             DisplayAppointments();
         }
@@ -30,6 +31,19 @@ namespace hospital_project
       Integrated Security=True;
       Connect Timeout=30;
       Encrypt=False");
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Time" && e.Value != null)
+            {
+                
+                TimeSpan time = (TimeSpan)e.Value;
+
+                
+                e.Value = DateTime.Today.Add(time).ToString("hh:mm tt");
+                e.FormattingApplied = true;
+            }
+        }
 
 
         private void DisplayAppointments()
@@ -48,7 +62,7 @@ namespace hospital_project
 
                 dataGridView1.DataSource = dt;
 
-                dataGridView1.Columns["Time"].DefaultCellStyle.Format = "hh:mm tt";
+                
                 dataGridView1.Columns["Date"].DefaultCellStyle.Format = "dd-MMM-yyyy";
 
             }
