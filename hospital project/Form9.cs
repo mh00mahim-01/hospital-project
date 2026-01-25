@@ -75,12 +75,15 @@ namespace hospital_project
                 }
 
 
-                MessageBox.Show("Appointment Confirmed",
-                                "Success",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                string appointmentDate = dateTimePicker1.Value.ToString("dd MMM yyyy");
+                string appointmentTime = dateTimePicker2.Value.ToString("hh:mm tt");
 
-                
+                MessageBox.Show(
+                    $"Appointment Confirmed!\n\nDate: {appointmentDate}\nTime: {appointmentTime}",
+                    "Success",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();
