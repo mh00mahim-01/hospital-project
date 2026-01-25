@@ -47,6 +47,10 @@ namespace hospital_project
                 sda.Fill(dt);
 
                 dataGridView1.DataSource = dt;
+
+                dataGridView1.Columns["Time"].DefaultCellStyle.Format = "hh:mm tt";
+                dataGridView1.Columns["Date"].DefaultCellStyle.Format = "dd-MMM-yyyy";
+
             }
             catch (Exception ex)
             {
