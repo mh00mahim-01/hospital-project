@@ -62,8 +62,9 @@
             // 
             // button2
             // 
+            this.button2.AutoSize = true;
             this.button2.BackgroundImage = global::hospital_project.Properties.Resources.Copilot_20260122_004546;
-            this.button2.Location = new System.Drawing.Point(294, 173);
+            this.button2.Location = new System.Drawing.Point(270, 234);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(152, 146);
             this.button2.TabIndex = 5;
@@ -84,9 +85,9 @@
             // button3
             // 
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.Location = new System.Drawing.Point(418, 340);
+            this.button3.Location = new System.Drawing.Point(518, 234);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 146);
+            this.button3.Size = new System.Drawing.Size(156, 146);
             this.button3.TabIndex = 9;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);

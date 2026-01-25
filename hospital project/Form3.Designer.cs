@@ -176,7 +176,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(269, 495);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 46);
+            this.button3.Size = new System.Drawing.Size(114, 46);
             this.button3.TabIndex = 47;
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = false;
@@ -185,10 +185,10 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(389, 495);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(405, 495);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 46);
+            this.button4.Size = new System.Drawing.Size(110, 46);
             this.button4.TabIndex = 48;
             this.button4.Text = "RESET";
             this.button4.UseVisualStyleBackColor = false;
